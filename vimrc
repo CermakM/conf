@@ -10,8 +10,8 @@ set nocompatible
 set term=xterm-256color
 
 set incsearch
-set scrolloff
-set backspace
+set scrolloff=2
+set backspace=indent
 set autoread
 
 " Enable syntax and plugins
