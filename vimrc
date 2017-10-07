@@ -5,7 +5,7 @@
 " python3 del powerline_setup
 
 " Enagle thesaurus 
-set thesaurus+=/home/macermak/.vim/mthesaur.txt 
+" set thesaurus+=/home/macermak/.vim/mthesaur.txt 
 
 " ----  Custom settings 
 "
@@ -17,17 +17,27 @@ set scrolloff=2
 set backspace=indent,eol,start
 set autoread
 set showcmd
+set showmatch
+
+" Set color column (useful for pytoh den)
+set colorcolumn=80
+highlight ColorColumn ctermbg=darkred
+
+" Show spaces and newlines
+set list
 
 " Enable syntax and plugins
 syntax enable
 filetype plugin on
 
+" Enable folding
+" set foldmethod=indent
 
 " Braces autocomplete features
 inoremap {<CR> {<CR>}<Esc>ko
-inoremap {<Space> {   }<ESC>2hi
-inoremap (<Space> (   )<ESC>2hi
-inoremap [<Space> [   ]<ESC>2hi
+inoremap {<Space> {}<ESC>i
+inoremap (<Space> ()<ESC>i
+inoremap [<Space> []<ESC>i
 
 " Shortcut for overwriting files with root privileges
 cnoremap w!! w !sudo tee % > /dev/null 
@@ -38,8 +48,8 @@ set path+=**
 " - display matching files when tab completing
 set wildmenu
 
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 
 
 " ----  Plugin management 
