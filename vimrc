@@ -64,5 +64,18 @@ Plug 'tpope/vim-commentary'
 Plug 'ron89/thesaurus_query.vim'
 call plug#end()
 
-" Syntastic settings 
-let g:syntastic_auto_jump = 1
+" Syntastic settings
+"
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['pylint']
+
+" Errors jumping
+nnoremap <C-j> :lnext<CR>
+nnoremap <C-k> :lprev<CR>
