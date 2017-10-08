@@ -33,6 +33,8 @@ filetype plugin on
 " Enable folding
 " set foldmethod=indent
 
+noremap cp yap<S-}>p
+
 " Braces autocomplete features
 inoremap {<CR> {<CR>}<Esc>ko
 inoremap {<Space> {}<ESC>i
