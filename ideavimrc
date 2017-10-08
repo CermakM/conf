@@ -1,0 +1,9 @@
+" Source custom vimrc for keymappings
+source ~/.vimrc
+
+" Enables surround plugin
+set surround
+
+set showmode
+set smartcase
+set matchpairs
