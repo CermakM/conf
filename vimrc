@@ -9,6 +9,8 @@
 
 " ----  Custom settings 
 "
+" Set the leader key
+let mapleader = ' '
 set nocompatible
 set term=xterm-256color
 
@@ -56,14 +58,18 @@ set shiftwidth=4
 
 " ----  Plugin management 
 "
+" Slimux key bindings
+map <Leader><CR> :SlimuxREPLSendLine<CR>
+
 call plug#begin()
 "Plug 'tpope/vim-sensible'
 "Plug 'scrooloose/nerdtree'
 "Plug 'kien/ctrlp.vim'
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
+Plug 'epeli/slimux'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'ron89/thesaurus_query.vim'
+"Plug 'ron89/thesaurus_query.vim'
 call plug#end()
 
 " Syntastic settings
