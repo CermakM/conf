@@ -11,12 +11,21 @@
 "
 " Set the leader key
 let mapleader = ' '
+
+" Disable scanning tags
+set cpt-=t
+
+set visualbell
+set noerrorbells
 set nocompatible
+
 set term=xterm-256color
 
 set incsearch
 set scrolloff=2
 set backspace=indent,eol,start
+
+" Set auto refreshing of changes
 set autoread
 set showcmd
 set showmatch
@@ -72,6 +81,9 @@ Plug 'tpope/vim-commentary'
 "Plug 'ron89/thesaurus_query.vim'
 call plug#end()
 
+" Disable scanning included files
+setglobal complete-=i
+
 " Syntastic settings
 "
 set statusline+=%#warningmsg#
@@ -79,8 +91,9 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pylint']
 
