@@ -15,11 +15,11 @@ let mapleader = ' '
 " Disable scanning tags
 set cpt-=t
 
-set visualbell
+set belloff=all
 set noerrorbells
 set nocompatible
 
-set term=xterm-256color
+" set term=xterm-256color
 
 set incsearch
 set scrolloff=2
@@ -31,7 +31,7 @@ set showcmd
 set showmatch
 
 " Set color column (useful for pytoh den)
-set colorcolumn=80
+set colorcolumn=120
 highlight ColorColumn ctermbg=darkred
 
 " Show spaces and newlines
@@ -47,7 +47,7 @@ filetype plugin on
 noremap cp yap<S-}>p
 
 " Braces autocomplete features
-inoremap {<CR> {<CR>}<Esc>ko
+"inoremap {<CR> {<CR>}<Esc>ko
 inoremap {<Space> {}<ESC>i
 inoremap (<Space> ()<ESC>i
 inoremap [<Space> []<ESC>i
@@ -67,25 +67,43 @@ set shiftwidth=4
 
 " ----  Plugin management 
 "
-" Slimux key bindings
-map <Leader><CR> :SlimuxREPLSendLine<CR>
-
 call plug#begin()
 "Plug 'tpope/vim-sensible'
-"Plug 'scrooloose/nerdtree'
 "Plug 'kien/ctrlp.vim'
-"Plug 'vim-syntastic/syntastic'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-syntastic/syntastic'
 Plug 'epeli/slimux'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+" colorschemes
+Plug 'ErichDonGubler/vim-sublime-monokai'
+Plug 'phanviet/vim-monokai-pro'
 "Plug 'ron89/thesaurus_query.vim'
 call plug#end()
+
+" colorscheme
+" set termguicolors
+" colorscheme sublimemonokai
+colorscheme monokai
+
+" NERDTree
+" autocmd vimenter * NERDTree
+nmap <Leader>T :NERDTreeToggle<CR>
+
+"
+" Slimux key bindings
+let g:slimux_python_ipython = 1
+
+map <Leader><C-m> :SlimuxREPLSendLine<CR>
+vmap <Leader><C-m> :SlimuxREPLSendSelection<CR>
+
 
 " Disable scanning included files
 setglobal complete-=i
 
 " Syntastic settings
-"
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -100,3 +118,11 @@ let g:syntastic_python_checkers = ['pylint']
 " Errors jumping
 nnoremap <C-j> :lnext<CR>
 nnoremap <C-k> :lprev<CR>
+
+" Cursor
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
+set guicursor+=n-v-c:blinkon0
+
