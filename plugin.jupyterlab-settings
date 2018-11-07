@@ -1,0 +1,106 @@
+{
+     "inspector:open": {
+      "command": "inspector:open",
+      "keys": [
+           "Ctrl Shift I"
+      ],
+      "selector": "body",
+      "title": "Open Inspector",
+      "category": "Inspector"
+    },
+    "notebook:enter-edit-mode-1": {
+      "command": "notebook:enter-edit-mode",
+      "keys": [
+        "I"
+      ],
+      "selector": ".jp-Notebook:focus",
+      "title": "Enter Edit Mode",
+      "category": "Notebook Operations"
+    },
+     "runmenu:run-all": {
+      "command": "runmenu:run-all",
+      "keys": [
+        "Ctrl Shift Enter"
+      ],
+      "selector": "[data-jp-code-runner]",
+      "title": "Run All",
+      "category": "Run Menu"
+    },
+    "notebook:paste-cell-below": {
+      "command": "notebook:paste-cell-below",
+      "keys": [
+        "P"
+      ],
+      "selector": ".jp-Notebook:focus",
+      "title": "Paste Cell(s) Below",
+      "category": "Notebook Cell Operations"
+    },
+    "notebook:paste-cell-above": {
+      "command": "notebook:paste-cell-above",
+      "keys": [
+        "Shift P"
+      ],
+      "selector": ".jp-Notebook:focus",
+      "title": "Paste Cell(s) Below",
+      "category": "Notebook Cell Operations"
+    },
+    "kernelmenu:interrupt": {
+      "command": "kernelmenu:interrupt",
+      "keys": [
+        "Ctrl Shift -"
+      ],
+      "selector": "[data-jp-kernel-user]:focus",
+      "title": "Interrupt Kernel",
+      "category": "Kernel Operations"
+    },
+    "notebook:cut-cell": {
+      "command": "notebook:cut-cell",
+      "keys": [
+        "D",
+        "D"
+      ],
+      "selector": ".jp-Notebook:focus",
+      "title": "Cut Cell(s)",
+      "category": "Notebook Cell Operations"
+    },
+    "notebook:change-cell-to-code": {
+      "command": "notebook:change-cell-to-code",
+      "keys": [
+        "Ctrl 1"
+      ],
+      "selector": ".jp-Notebook:focus",
+      "title": "Change to Code Cell Type",
+      "category": "Notebook Cell Operations"
+    },
+    // [missing schema title]
+    // [missing schema description]
+    "notebook:change-cell-to-markdown": {
+      "command": "notebook:change-cell-to-markdown",
+      "keys": [
+        "Ctrl 2"
+      ],
+      "selector": ".jp-Notebook:focus",
+      "title": "Change to Markdown Cell Type",
+      "category": "Notebook Cell Operations"
+    },
+    // [missing schema title]
+    // [missing schema description]
+    "notebook:change-cell-to-raw": {
+      "command": "notebook:change-cell-to-raw",
+      "keys": [
+        "Ctrl 3"
+      ],
+      "selector": ".jp-Notebook:focus",
+      "title": "Change to Raw Cell Type",
+      "category": "Notebook Cell Operations"
+    },
+    "notebook:delete-cell": {
+      "command": "notebook:delete-cell",
+      "keys": [
+        "X"
+      ],
+      "selector": ".jp-Notebook:focus",
+      "title": "Delete Cell(s)",
+      "category": "Notebook Cell Operations"
+    }
+}
