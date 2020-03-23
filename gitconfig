@@ -1,0 +1,29 @@
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	lo = log
+	pr = request-pull
+	unstage = reset HEAD --
+	last = log -1 HEAD
+[user]
+	email = prace.mcermak@gmail.com
+	name = Marek Cermak
+
+[credential]
+	helper = store
+[core]
+	editor = vimx
+	autocrlf = false
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2
+
+[push]
+	followTags = true
+
